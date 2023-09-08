@@ -4,9 +4,14 @@ kotlinx-coroutines-core = "1.7.1"
 
 voyager = "1.0.0-rc05"
 kotlinx-datetime = "0.4.0"
+sqlDelight = "2.0.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+
+# Database - SQLDelight
+sqlDelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
+sqlDelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 
 # Coroutines
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "core" }

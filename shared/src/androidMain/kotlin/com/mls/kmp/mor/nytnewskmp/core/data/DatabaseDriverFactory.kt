@@ -1,9 +1,9 @@
 package com.mls.kmp.mor.nytnewskmp.core.data
 
 import android.content.Context
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.mls.kmp.mor.nytnewskmp.database.NytDatabase
-import com.squareup.sqldelight.android.AndroidSqliteDriver
-import com.squareup.sqldelight.db.SqlDriver
 
 actual class DatabaseDriverFactory(
     private val context: Context

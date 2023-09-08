@@ -19,6 +19,9 @@ pluginManagement {
         id("com.android.library").version(agpVersion)
 
         id("org.jetbrains.compose").version(composeVersion)
+
+        //for now it seems that this plugin is not needed
+//        id("app.cash.sqldelight").version("2.0.0")
     }
 }
 

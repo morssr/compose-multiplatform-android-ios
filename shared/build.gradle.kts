@@ -2,7 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
-    id("com.squareup.sqldelight")
+    id("app.cash.sqldelight") version "2.0.0"
 }
 
 kotlin {
@@ -46,9 +46,6 @@ kotlin {
 //                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.dateTime)
 
-
-                implementation("com.squareup.sqldelight:runtime:1.5.5")
-                implementation("com.squareup.sqldelight:coroutines-extensions:1.5.5")
                 implementation("dev.icerock.moko:mvvm-core:0.16.1")
                 implementation("dev.icerock.moko:mvvm-compose:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow:0.16.1")
@@ -64,7 +61,7 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("com.squareup.sqldelight:android-driver:1.5.5")
+                implementation(libs.sqlDelight.androidDriver)
                 implementation("androidx.appcompat:appcompat:1.6.1")
                 implementation("androidx.activity:activity-compose:1.7.2")
             }
@@ -76,7 +73,7 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependencies {
-                implementation("com.squareup.sqldelight:native-driver:1.5.5")
+                implementation(libs.sqlDelight.nativeDriver)
             }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -109,9 +106,10 @@ android {
 }
 
 sqldelight {
-    database("NytDatabase") {
-        packageName = "com.mls.kmp.mor.nytnewskmp.database"
-        sourceFolders = listOf("sqldelight")
+    databases {
+        create("NytDatabase") {
+            packageName.set("com.mls.kmp.mor.nytnewskmp.database")
+        }
     }
 }
 
