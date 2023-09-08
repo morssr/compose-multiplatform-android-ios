@@ -1,0 +1,10 @@
+CREATE TABLE articleEntity (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    title Text NOT NULL,
+    content TEXT NOT NULL
+    );
+
+    getArticleList:
+    SELECT *
+    FROM articleEntity
+    ORDER BY id DESC;

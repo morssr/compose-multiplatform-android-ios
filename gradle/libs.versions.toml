@@ -1,0 +1,35 @@
+[versions]
+core = "1.9.0"
+kotlinx-coroutines-core = "1.7.1"
+
+voyager = "1.0.0-rc05"
+kotlinx-datetime = "0.4.0"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+
+# Coroutines
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "core" }
+
+# Date & Time
+kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+
+# Navigation - Voyager
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-bottomSheetNavigator = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+
+[plugins]
+
+[bundles]
+voyager = [
+    "voyager-koin",
+    "voyager-transitions",
+    "voyager-tabNavigator",
+    "voyager-bottomSheetNavigator",
+    "voyager-navigator"
+]
+
+
