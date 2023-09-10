@@ -4,6 +4,7 @@ kotlinx-coroutines-core = "1.7.1"
 
 voyager = "1.0.0-rc05"
 kotlinx-datetime = "0.4.0"
+kotlinx-serialization = "1.5.0"
 sqlDelight = "2.0.0"
 
 [libraries]
@@ -18,6 +19,8 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 
 # Date & Time
 kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+# Serialization
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # Navigation - Voyager
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
