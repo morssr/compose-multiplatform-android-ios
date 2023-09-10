@@ -41,15 +41,16 @@ kotlin {
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
 
-                implementation(libs.bundles.voyager)
+//                implementation(libs.bundles.voyager)
 
 //                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.dateTime)
 
-                implementation("dev.icerock.moko:mvvm-core:0.16.1")
-                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
-                implementation("dev.icerock.moko:mvvm-flow:0.16.1")
-                implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+
+//                implementation("dev.icerock.moko:mvvm-core:0.16.1")
+//                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
+//                implementation("dev.icerock.moko:mvvm-flow:0.16.1")
+//                implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
             }
         }
 
