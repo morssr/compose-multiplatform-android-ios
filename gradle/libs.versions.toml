@@ -33,7 +33,8 @@ voyager = [
     "voyager-koin",
     "voyager-transitions",
     "voyager-tabNavigator",
-    "voyager-bottomSheetNavigator",
+    #disable for now, causes build error
+#    "voyager-bottomSheetNavigator",
     "voyager-navigator"
 ]
 
