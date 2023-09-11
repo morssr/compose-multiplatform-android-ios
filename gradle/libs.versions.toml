@@ -2,6 +2,7 @@
 core = "1.9.0"
 kotlinx-coroutines-core = "1.7.1"
 
+ktorClient = "2.3.4"
 voyager = "1.0.0-rc05"
 kotlinx-datetime = "0.4.0"
 kotlinx-serialization = "1.5.0"
@@ -11,6 +12,14 @@ sqlDelight = "2.0.0"
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
 
 # Database - SQLDelight
+ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClient" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClient" }
+ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClient" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClient" }
+ktor-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktorClient" }
+ktor-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorClient" }
+
 sqlDelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 

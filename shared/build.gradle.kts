@@ -47,6 +47,10 @@ kotlin {
                 implementation(libs.kotlinx.dateTime)
                 implementation(libs.kotlinx.serialization)
 
+                implementation(libs.ktor.core)
+                implementation(libs.ktor.logging)
+                implementation(libs.ktor.contentNegotiation)
+                implementation(libs.ktor.serialization)
 
 //                implementation("dev.icerock.moko:mvvm-core:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
@@ -58,6 +62,8 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(libs.ktor.mock)
+
             }
         }
 
@@ -66,6 +72,7 @@ kotlin {
                 implementation(libs.sqlDelight.androidDriver)
                 implementation("androidx.appcompat:appcompat:1.6.1")
                 implementation("androidx.activity:activity-compose:1.7.2")
+                implementation(libs.ktor.android)
             }
         }
 
@@ -76,6 +83,7 @@ kotlin {
         val iosMain by creating {
             dependencies {
                 implementation(libs.sqlDelight.nativeDriver)
+                implementation(libs.ktor.ios)
             }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
