@@ -10,11 +10,12 @@ sqlDelight = "2.0.0"
 koin = "3.4.3"
 koinCompose = "1.0.4"
 datastorePreferencesCore = "1.1.0-dev01"
+kermit = "2.0.0-RC4"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
 
-# Database - SQLDelight
+# Ktor - Networking
 ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClient" }
 ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClient" }
@@ -23,12 +24,14 @@ ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClie
 ktor-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktorClient" }
 ktor-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorClient" }
 
+# Koin - DI
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
 
+# Database - SQLDelight
 sqlDelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 
@@ -47,7 +50,11 @@ voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", v
 voyager-bottomSheetNavigator = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 
+# DataStore - Preferences
 datastore-preferences = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastorePreferencesCore" }
+
+# Logging
+logger-kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 
 [plugins]
 

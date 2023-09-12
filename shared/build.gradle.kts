@@ -58,6 +58,8 @@ kotlin {
 
                 implementation(libs.datastore.preferences)
 
+                implementation(libs.logger.kermit)
+
 //                implementation("dev.icerock.moko:mvvm-core:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-flow:0.16.1")
