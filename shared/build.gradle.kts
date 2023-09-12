@@ -56,6 +56,8 @@ kotlin {
                 implementation(libs.koin.test)
                 implementation(libs.koin.compose)
 
+                implementation(libs.datastore.preferences)
+
 //                implementation("dev.icerock.moko:mvvm-core:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-flow:0.16.1")

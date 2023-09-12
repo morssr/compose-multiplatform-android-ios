@@ -9,6 +9,7 @@ kotlinx-serialization = "1.5.0"
 sqlDelight = "2.0.0"
 koin = "3.4.3"
 koinCompose = "1.0.4"
+datastorePreferencesCore = "1.1.0-dev01"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
@@ -45,6 +46,8 @@ voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", vers
 voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
 voyager-bottomSheetNavigator = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+
+datastore-preferences = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastorePreferencesCore" }
 
 [plugins]
 
