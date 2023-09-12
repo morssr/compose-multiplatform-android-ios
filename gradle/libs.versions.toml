@@ -7,6 +7,8 @@ voyager = "1.0.0-rc05"
 kotlinx-datetime = "0.4.0"
 kotlinx-serialization = "1.5.0"
 sqlDelight = "2.0.0"
+koin = "3.4.3"
+koinCompose = "1.0.4"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
@@ -19,6 +21,12 @@ ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", versi
 ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClient" }
 ktor-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktorClient" }
 ktor-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktorClient" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCompose" }
 
 sqlDelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }

@@ -52,6 +52,10 @@ kotlin {
                 implementation(libs.ktor.contentNegotiation)
                 implementation(libs.ktor.serialization)
 
+                implementation(libs.koin.core)
+                implementation(libs.koin.test)
+                implementation(libs.koin.compose)
+
 //                implementation("dev.icerock.moko:mvvm-core:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
 //                implementation("dev.icerock.moko:mvvm-flow:0.16.1")
