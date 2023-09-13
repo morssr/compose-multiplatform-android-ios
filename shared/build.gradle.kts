@@ -112,7 +112,7 @@ kotlin {
 
 android {
     namespace = "com.mls.kmp.mor.nytnewskmp"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         minSdk = 24
     }
