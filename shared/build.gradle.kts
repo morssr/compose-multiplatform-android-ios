@@ -1,8 +1,8 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version "1.8.0"
     id("com.android.library")
     id("org.jetbrains.compose")
+    kotlin("plugin.serialization") version "1.8.0"
     id("app.cash.sqldelight") version "2.0.0"
 }
 
