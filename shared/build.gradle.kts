@@ -131,7 +131,7 @@ android {
 
 sqldelight {
     databases {
-        create("NytDatabase") {
+        create("AppDatabase") {
             packageName.set("com.mls.kmp.mor.nytnewskmp.database")
         }
     }
