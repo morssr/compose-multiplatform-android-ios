@@ -86,6 +86,7 @@ kotlin {
                 implementation("androidx.appcompat:appcompat:1.6.1")
                 implementation("androidx.activity:activity-compose:1.7.2")
                 implementation(libs.ktor.android)
+                implementation(libs.koin.android)
             }
         }
 
