@@ -62,6 +62,7 @@ kotlin {
                 implementation(libs.datastore.preferences)
 
                 implementation(libs.logger.kermit)
+                implementation(libs.kamel.image)
 
 
 //                implementation("dev.icerock.moko:mvvm-core:0.16.1")
