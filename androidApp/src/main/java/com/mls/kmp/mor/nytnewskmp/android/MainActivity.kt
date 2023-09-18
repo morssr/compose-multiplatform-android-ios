@@ -11,8 +11,6 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import com.mls.kmp.mor.nytnewskmp.MyApp
-import com.mls.kmp.mor.nytnewskmp.cache.ProductsDao
-import org.koin.android.ext.android.get
 
 private const val TAG = "MainActivity"
 
@@ -22,7 +20,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         //fix for "Please use androidContext() function in your KoinApplication configuration."
-        val prod: ProductsDao = get()
+//        val prod: ProductsDao = get()
 
         setContent {
             val darkTheme = isSystemInDarkTheme()
