@@ -1,10 +1,10 @@
-CREATE TABLE articleEntity (
+CREATE TABLE exampleEntity (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     title Text NOT NULL,
     content TEXT NOT NULL
     );
 
-    getArticleList:
+    getExamplesList:
     SELECT *
-    FROM articleEntity
+    FROM exampleEntity
     ORDER BY id DESC;
