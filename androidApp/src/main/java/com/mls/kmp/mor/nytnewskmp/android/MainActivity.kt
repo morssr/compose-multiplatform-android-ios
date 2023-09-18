@@ -1,41 +1,46 @@
 package com.mls.kmp.mor.nytnewskmp.android
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.mls.kmp.mor.nytnewskmp.Greeting
-import com.mls.kmp.mor.nytnewskmp.MainScreen
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
+import com.mls.kmp.mor.nytnewskmp.MyApp
+import com.mls.kmp.mor.nytnewskmp.cache.ProductsDao
+import org.koin.android.ext.android.get
+
+private const val TAG = "MainActivity"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        //fix for "Please use androidContext() function in your KoinApplication configuration."
+        val prod: ProductsDao = get()
+
         setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    MainScreen()
+            val darkTheme = isSystemInDarkTheme()
+
+            val view = LocalView.current
+            if (!view.isInEditMode) {
+                SideEffect {
+                    val window = (view.context as Activity).window
+                    window.statusBarColor = Color.Transparent.toArgb()
+                    window.navigationBarColor = Color.Transparent.toArgb()
+                    WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
+                        !darkTheme
+                    WindowCompat.getInsetsController(window, view).isAppearanceLightNavigationBars =
+                        !darkTheme
                 }
             }
+
+            MyApp(darkTheme)
         }
-    }
-}
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
     }
 }

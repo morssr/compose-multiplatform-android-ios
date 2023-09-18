@@ -1,6 +1,5 @@
 package com.mls.kmp.mor.nytnewskmp
 
-import androidx.compose.ui.interop.LocalUIViewController
 import androidx.compose.ui.window.ComposeUIViewController
 
 import platform.UIKit.UIScreen
@@ -11,5 +10,5 @@ fun MainViewController() = ComposeUIViewController {
         UIScreen.mainScreen.traitCollection.userInterfaceStyle ==
                 UIUserInterfaceStyle.UIUserInterfaceStyleDark
 
-    MainScreen()
+    MyApp()
 }
