@@ -45,13 +45,13 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.mls.kmp.mor.nytnewskmp.ui.common.HorizontalDotsIndicator
 import com.mls.kmp.mor.nytnewskmp.ui.common.ProductImage
 import com.mls.kmp.mor.nytnewskmp.ui.common.ProductScreenError
 import com.mls.kmp.mor.nytnewskmp.ui.common.ProductScreenLoading
-import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
 import kotlin.math.roundToInt
 
@@ -60,7 +60,7 @@ data class ProductScreenRoute(val productId: Int) : Screen {
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
-        val viewModel: ProductScreenModel = koinInject(parameters = { parametersOf(productId) })
+        val viewModel = getScreenModel<ProductScreenModel> { parametersOf(productId)}
         val state by viewModel.state.collectAsState()
 
         ProductScreen(

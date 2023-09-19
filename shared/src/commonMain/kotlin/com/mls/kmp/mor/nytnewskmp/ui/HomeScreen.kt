@@ -38,17 +38,18 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.mls.kmp.mor.nytnewskmp.ui.common.ProductImage
-import org.koin.compose.koinInject
 
 class HomeScreenRoute : Screen {
 
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
-        val viewModel: HomeScreenModel = koinInject()
+
+        val viewModel = getScreenModel<HomeScreenModel>()
         val state by viewModel.state.collectAsState()
 
         MainScreenContent(
