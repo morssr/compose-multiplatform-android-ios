@@ -1,0 +1,30 @@
+import kotlin.String;
+import kotlin.collections.List;
+
+CREATE TABLE IF NOT EXISTS products (
+    id                  INTEGER NOT NULL PRIMARY KEY,
+    title               TEXT NOT NULL,
+    description         TEXT NOT NULL,
+    price               INTEGER NOT NULL,
+    discount_precentage REAL NOT NULL,
+    rating              REAL NOT NULL,
+    stock               INTEGER NOT NULL,
+    brand               TEXT NOT NULL,
+    category            TEXT NOT NULL,
+    thumbnail           TEXT NOT NULL,
+    images              TEXT AS List<String> NOT NULL
+);
+
+    getProductsList:
+    SELECT *
+    FROM products
+    ORDER BY id DESC;
+
+    getProductById:
+    SELECT *
+    FROM products
+    WHERE id = ?;
+
+    insertOrReplaceProduct:
+    INSERT OR REPLACE INTO products (id, title, description, price, discount_precentage, rating, stock, brand, category, thumbnail, images)
+    VALUES ?;
