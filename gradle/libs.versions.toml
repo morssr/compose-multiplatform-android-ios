@@ -1,6 +1,7 @@
 [versions]
-core = "1.9.0"
-kotlinx-coroutines-core = "1.7.1"
+#not used
+#core = "1.12.0"
+#kotlinx-coroutines-core = "1.7.3"
 
 ktorClient = "2.3.4"
 voyager = "1.0.0-rc07"
@@ -14,7 +15,12 @@ kermit = "2.0.0-RC4"
 kamelImage = "0.7.3"
 
 [libraries]
-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+
+# not used
+#core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+# Coroutines
+#kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+
 
 # Ktor - Networking
 ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
@@ -36,9 +42,6 @@ koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinComp
 sqlDelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
 sqlDelight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
-
-# Coroutines
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "core" }
 
 # Date & Time
 kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
@@ -69,7 +72,7 @@ voyager = [
     "voyager-transitions",
     "voyager-tabNavigator",
     #disable for now, causes build error
-#    "voyager-bottomSheetNavigator",
+    #    "voyager-bottomSheetNavigator",
     "voyager-navigator"
 ]
 
