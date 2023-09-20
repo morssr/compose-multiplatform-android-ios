@@ -152,8 +152,8 @@ dependencies {
     commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
 
-    commonMainApi("dev.icerock.moko:resources-compose:0.23.0") // for compose multiplatform
-    commonTestImplementation("dev.icerock.moko:resources-test:0.23.0")
+    commonMainApi(libs.moko.resources.compose) // for compose multiplatform
+    commonTestImplementation(libs.moko.resources.test)
 }
 
 multiplatformResources {
