@@ -46,7 +46,6 @@ kotlin {
                 implementation(compose.components.resources)
 
                 implementation(libs.bundles.voyager)
-//                implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.kotlinx.dateTime)
                 implementation(libs.kotlinx.serialization)
 
@@ -66,12 +65,6 @@ kotlin {
 
                 implementation(libs.logger.kermit)
                 implementation(libs.kamel.image)
-
-
-//                implementation("dev.icerock.moko:mvvm-core:0.16.1")
-//                implementation("dev.icerock.moko:mvvm-compose:0.16.1")
-//                implementation("dev.icerock.moko:mvvm-flow:0.16.1")
-//                implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
             }
         }
 
@@ -143,12 +136,7 @@ sqldelight {
 }
 
 dependencies {
-    implementation("androidx.core:core:1.10.1")
-    commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
-
+    commonMainApi(libs.moko.mvvm.core)
     commonMainApi(libs.moko.resources.compose) // for compose multiplatform
     commonTestImplementation(libs.moko.resources.test)
 }
