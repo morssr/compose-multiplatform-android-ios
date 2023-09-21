@@ -4,6 +4,7 @@ plugins {
     id("org.jetbrains.compose")
     kotlin("plugin.serialization") version "1.8.0"
     id("app.cash.sqldelight") version "2.0.0"
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 kotlin {
@@ -18,6 +19,8 @@ kotlin {
     targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget::class.java).all {
         binaries.withType(org.jetbrains.kotlin.gradle.plugin.mpp.Framework::class.java).all {
             export("dev.icerock.moko:mvvm-core:0.16.1")
+            export("dev.icerock.moko:resources:0.23.0")
+            export("dev.icerock.moko:graphics:0.9.0") // toUIColor here
         }
     }
     
@@ -81,6 +84,7 @@ kotlin {
         }
 
         val androidMain by getting {
+            dependsOn(commonMain)
             dependencies {
                 implementation(libs.sqlDelight.androidDriver)
                 implementation("androidx.appcompat:appcompat:1.6.1")
@@ -95,14 +99,15 @@ kotlin {
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
-            dependencies {
-                implementation(libs.sqlDelight.nativeDriver)
-                implementation(libs.ktor.ios)
-            }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+
+            dependencies {
+                implementation(libs.sqlDelight.nativeDriver)
+                implementation(libs.ktor.ios)
+            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting
@@ -143,4 +148,12 @@ dependencies {
     commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+
+    commonMainApi(libs.moko.resources.compose) // for compose multiplatform
+    commonTestImplementation(libs.moko.resources.test)
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = "com.mls.kmp.mor.nytnewskmp.library" // required
+//    disableStaticFrameworkWarning = true
 }

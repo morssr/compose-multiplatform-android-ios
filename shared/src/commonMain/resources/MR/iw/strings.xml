@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="hello_world">שלום עולם!</string>
+    <string name="click_me">לחץ עליי!</string>
+</resources>

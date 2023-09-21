@@ -1,5 +1,6 @@
 buildscript {
     dependencies {
+        classpath (libs.moko.resources.generator)
 //        classpath("com.squareup.sqldelight:gradle-plugin:1.5.5")
     }
 }
