@@ -56,7 +56,6 @@ kotlin {
 
                 implementation(libs.sqlDelight.coroutines)
 
-
                 implementation(libs.koin.core)
                 implementation(libs.koin.test)
                 implementation(libs.koin.compose)
@@ -80,8 +79,6 @@ kotlin {
             dependsOn(commonMain)
             dependencies {
                 implementation(libs.sqlDelight.androidDriver)
-                implementation("androidx.appcompat:appcompat:1.6.1")
-                implementation("androidx.activity:activity-compose:1.7.2")
                 implementation(libs.ktor.android)
                 implementation(libs.koin.android)
             }

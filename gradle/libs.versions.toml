@@ -2,6 +2,10 @@
 core = "1.9.0"
 kotlinx-coroutines-core = "1.7.1"
 
+androidx-core = "1.7.0"
+androidx-activity-compose = "1.7.2"
+androidx-compose = "1.5.1"
+
 ktorClient = "2.3.4"
 voyager = "1.0.0-rc07"
 kotlinx-datetime = "0.4.0"
@@ -17,6 +21,14 @@ mokoMvvm = "0.16.1"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+
+# Android
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity-compose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "androidx-compose" }
+androidx-compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose" }
+androidx-compose-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "androidx-compose" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "androidx-compose" }
 
 # Ktor - Networking
 ktor-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
