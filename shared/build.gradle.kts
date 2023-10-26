@@ -21,6 +21,7 @@ kotlin {
             export("dev.icerock.moko:mvvm-core:0.16.1")
             export("dev.icerock.moko:resources:0.23.0")
             export("dev.icerock.moko:graphics:0.9.0") // toUIColor here
+
         }
     }
     
@@ -56,6 +57,7 @@ kotlin {
 
                 implementation(libs.sqlDelight.coroutines)
 
+
                 implementation(libs.koin.core)
                 implementation(libs.koin.test)
                 implementation(libs.koin.compose)
@@ -64,6 +66,8 @@ kotlin {
 
                 implementation(libs.logger.kermit)
                 implementation(libs.kamel.image)
+
+                implementation(libs.windowSizeClass)
             }
         }
 
@@ -90,6 +94,7 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependsOn(commonMain)
+
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
@@ -98,6 +103,7 @@ kotlin {
                 implementation(libs.sqlDelight.nativeDriver)
                 implementation(libs.ktor.ios)
             }
+
         }
         val iosX64Test by getting
         val iosArm64Test by getting
@@ -136,6 +142,8 @@ dependencies {
     commonMainApi(libs.moko.mvvm.core)
     commonMainApi(libs.moko.resources.compose) // for compose multiplatform
     commonTestImplementation(libs.moko.resources.test)
+
+    commonMainApi(libs.calf.ui)
 }
 
 multiplatformResources {
