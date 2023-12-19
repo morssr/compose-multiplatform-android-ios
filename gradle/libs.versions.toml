@@ -1,4 +1,8 @@
 [versions]
+agp = "8.2.0"
+kotlin = "1.9.21"
+compose-plugin = "1.5.11"
+
 core = "1.9.0"
 kotlinx-coroutines-core = "1.7.1"
 
@@ -103,8 +107,6 @@ calf-ui = { module = "com.mohamedrejeb.calf:calf-ui", version.ref = "calf" }
 #WindowSizeClass
 windowSizeClass = { module = "dev.chrisbanes.material3:material3-window-size-class-multiplatform", version.ref = "windowSizeClass" }
 
-[plugins]
-
 [bundles]
 voyager = [
     "voyager-koin",
@@ -115,4 +117,8 @@ voyager = [
     "voyager-navigator"
 ]
 
-
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
