@@ -21,7 +21,7 @@ kotlin {
             export("dev.icerock.moko:mvvm-core:0.16.1")
             export("dev.icerock.moko:resources:0.23.0")
             export("dev.icerock.moko:graphics:0.9.0") // toUIColor here
-
+            export(libs.calf.ui)
         }
     }
     
